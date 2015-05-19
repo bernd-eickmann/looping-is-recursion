@@ -57,7 +57,7 @@
  (loop [my-seq a-seq
 	my-set #{}
 	my-vec []]
-	(cond (empty? my-seq) my-vec
+	(cond (empty? my-seq) my-seq
 	      (contains? my-set (first my-seq)) my-vec
 	      :else (recur (rest my-seq) (conj my-set (first my-seq)) (conj my-vec (first my-seq)))
 
